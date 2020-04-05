@@ -20,17 +20,22 @@
 			<section id="intro" class="main style1 dark fullscreen">
 				<div class="content">
 					<header>
-						<h2>El confinamiento acaba <span id="remaining-days"></span></h2>
+						<h2>Medellín - <span id='medellin-date'></span></h2>
 						<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+						<script>
+							moment.locale('es');
+							let today = moment().format('D MMMM');
+							document.getElementById('medellin-date').textContent = today;
+						</script>
+
+						<h2 style="margin-top: 1em;">El confinamiento acaba <span id="remaining-days"></span></h2>
 						<script>
 							moment.locale('es');
 							let remaining = moment([2020, 3, 13]).fromNow();
 							document.getElementById('remaining-days').textContent = remaining;
 						</script>
-						<br />
-						<br />
-						<br />
-						<h2>El pico y cédula de hoy es: <span id="p-y-c"></span></h2>
+
+						<h2 style="margin-top: 1em;">El pico y cédula de hoy es: <span id="p-y-c"></span></h2>
 						<script>
 							pyc_map = {
 								0: "9 y 0",
