@@ -13,12 +13,6 @@
 		<!-- Header -->
 			<header id="header">
 				<h1>Cuarentena en Medellín</h1>
-				<nav>
-					<ul>
-						<li><a href="#intro">Días restantes</a></li>
-						<li><a href="#one">Pico y cédula</a></li>
-					</ul>
-				</nav>
 			</header>
 
 		<!-- Intro -->
@@ -32,71 +26,36 @@
 							let remaining = moment([2020, 3, 13]).fromNow();
 							document.getElementById('remaining-days').textContent = remaining;
 						</script>
-						<!-- <script>
-							var today = new Date();
-							var dd = String(today.getDate()).padStart(2, '0');
-							var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-							var yyyy = today.getFullYear();
+						<br />
+						<br />
+						<br />
+						<h2>El pico y cédula de hoy es: <span id="p-y-c"></span></h2>
+						<script>
+							pyc_map = { 
+								1: "1, 2 y 3",
+								2: "4, 5 y 6",
+								3: "7, 8 y 9",
+								4: "0, 1 y 2",
+								5: "3, 4 y 5",
+								6: "6, 7 y 8",
+								7: "9 y 0",
+							}
+							let dow = moment().day();
+							let pyc = pyc_map[dow];
+							document.getElementById('p-y-c').textContent = pyc;
+						</script>
 
-							today = mm + '/' + dd + '/' + yyyy;
-
-							document.getElementById('remaining-days').textContent = today;
-						</script> -->
 					</header>
 					<p>La ciudad de <strong>Medellín</strong> está en cuarentena hasta el <strong>13 de Abril</strong>.<br /></p>
-					<!-- <footer>
-						<a href="#one" class="button style2 down">More</a>
-					</footer> -->
 				</div>
-			</section>
-
-		<!-- One -->
-			<section id="one" class="main style1 dark fullscreen">
-				<div class="content">
-					<h2>El pico y cédula de hoy es: <span id="p-y-c"></span></h2>
-					<script>
-						pyc_map = { 
-							1: "1, 2 y 3",
-							2: "4, 5 y 6",
-							3: "7, 8 y 9",
-							4: "0, 1 y 2",
-							5: "3, 4 y 5",
-							6: "6, 7 y 8",
-							7: "9 y 0",
-						}
-						moment.locale('es');
-						let dow = moment().day();
-						console.log("DOW = " + dow)
-						let pyc = pyc_map[dow];
-						console.log("PYC = " + pyc)
-						document.getElementById('p-y-c').textContent = pyc;
-					</script>
-					<!-- <header>
-						<h2>What I Do</h2>
-					</header>
-					<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
-					id varius justo euismod in. Curabitur egestas consectetur magna.</p> -->
-				</div>
-				<a href="#two" class="button style2 down anchored">Next</a>
 			</section>
 
 		<!-- Footer -->
 			<footer id="footer">
 
-				<!-- Icons -->
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
-					</ul>
-
 				<!-- Menu -->
 					<ul class="menu">
-						<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+						<li>&copy; Cuarentena en Medellín</li>
 					</ul>
 
 			</footer>
